@@ -6,12 +6,13 @@
         <title>Home</title>
     </head>
     <body>
-        <p>This is the home page which includes two handler methods.</p>
+        <p>This is the home page which includes three handler methods.</p>
 
         <h2>Include /list</h2>
         <s:include path="${s:mvcUrl('HC#list').build()}">
             <!-- custom request param with multiple values -->
-            <s:param name="names" value="Foo,Bar" />
+            <s:param name="names" value="Foo" />
+            <s:param name="names" value="Bar" />
         </s:include>
 
         <s:eval expression="{names : new String[] {'Foo','Bar'}}" var="includeParams" scope="page" />
