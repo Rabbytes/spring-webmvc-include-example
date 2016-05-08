@@ -1,5 +1,4 @@
 *.swp
-/src
 /out
 /bin
 /*/bin
