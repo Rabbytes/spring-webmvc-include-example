@@ -9,4 +9,4 @@ List of names:
 </ul>
 
 <p>Include report for names by using current request params</p>
-<s:include path="/report" includeRequestParams="true" />
+<s:include path="${s:mvcUrl('report#show').build()}" includeRequestParams="true" />

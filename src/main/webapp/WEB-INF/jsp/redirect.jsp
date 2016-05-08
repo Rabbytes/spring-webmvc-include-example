@@ -6,7 +6,7 @@
     </head>
     <body>
         You never see this page because it includes a handler which redirects
-        <s:include path="/redirectpart">
+        <s:include path="${s:mvcUrl('HC#redirectPart').build()}">
             <s:param name="path" value="/" />
         </s:include>
     </body>

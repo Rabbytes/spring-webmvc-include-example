@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.servlet.ModelAndView
 
 @Controller
-@RequestMapping(path = '/report')
+@RequestMapping(path = '/report',name='report')
 class ReportController
 {
-    @RequestMapping()
+    @RequestMapping(name = 'show')
     def show(@RequestParam String[] names) {
         return new ModelAndView('report', [names: names.collectEntries {[(it): (int)(Math.random().next()*100)]}])
     }
